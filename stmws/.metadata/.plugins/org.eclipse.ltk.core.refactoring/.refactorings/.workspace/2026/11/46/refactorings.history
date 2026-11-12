@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy Project &apos;UART2_example&apos;" description="Copy Project &apos;UART2_example&apos;" destination="C:/_ddm/STM/STM32-Nucleo-F401RE/stmws" element="/UART2_example" flags="7" id="org.eclipse.ltk.core.refactoring.copyproject.resource" name="UART2_example_it" stamp="1794460406496"/>
+</session>

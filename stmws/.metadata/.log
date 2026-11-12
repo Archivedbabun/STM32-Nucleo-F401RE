@@ -1,0 +1,63 @@
+!SESSION 2026-11-12 10:36:52.499 -----------------------------------------------
+eclipse.buildId=Version 2.2.0
+java.version=21.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-11-12 10:37:22.600
+!MESSAGE Log4j2 initialized with config file C:\_ddm\STM\STM32-Nucleo-F401RE\stmws\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-11-12 10:37:26.322
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-12 10:37:27.332
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-12 10:37:27.333
+!MESSAGE port: 
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-11-12 10:38:12.693
+!MESSAGE Indexed 'UART2_example' (21 sources, 147 headers) in 2.66 sec: 13,007 declarations; 46,808 references; 1 unresolved inclusions; 92 syntax errors; 238 unresolved names (0.4%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-11-12 10:43:27.973
+!MESSAGE Indexed 'UART2_example_it' (20 sources, 70 headers) in 1.37 sec: 9,147 declarations; 35,573 references; 17 unresolved inclusions; 1,018 syntax errors; 3,546 unresolved names (7.3%)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-12 11:30:27.280
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+COM3
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-12 11:30:27.280
+!MESSAGE port: COM3
+
+!ENTRY org.eclipse.ui.ide 4 4 2026-11-12 11:35:41.734
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 2 1 2026-11-12 11:35:41.735
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2026-11-12 11:35:41.735
+!MESSAGE The project description file (.project) for 'UART2_example_it' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SESSION 2026-11-12 11:36:00.511 -----------------------------------------------
+eclipse.buildId=Version 2.2.0
+java.version=21.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-11-12 11:36:15.919
+!MESSAGE Log4j2 initialized with config file C:\_ddm\STM\STM32-Nucleo-F401RE\stmws\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-11-12 11:36:21.886
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-12 11:36:22.724
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-12 11:36:22.724
+!MESSAGE port: 
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-11-12 11:36:28.761
+!MESSAGE Indexed 'UART2_example_it' (20 sources, 120 headers) in 2.2 sec: 11,183 declarations; 42,525 references; 1 unresolved inclusions; 92 syntax errors; 238 unresolved names (0.44%)
