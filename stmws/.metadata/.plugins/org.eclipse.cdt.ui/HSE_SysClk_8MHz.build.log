@@ -1,0 +1,22 @@
+16:09:57 **** Incremental Build of configuration Debug for project HSE_SysClk_8MHz ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:36:38: error: passing argument 2 of 'sprintf' makes pointer from integer without a cast [-Wint-conversion]
+   36 |         sprintf( "SYSCLK : %ld\r\n", HAL_RCC_GetSysClockFreq());
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                      |
+      |                                      uint32_t {aka long unsigned int}
+In file included from ../Core/Src/main.c:6:
+C:\ST\STM32CubeIDE_2.2.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740\tools\bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/stdio.h:250:36: note: expected 'const char * restrict' but argument is of type 'uint32_t' {aka 'long unsigned int'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                                    ^
+../Core/Src/main.c:37:36: error: 'msg' undeclared (first use in this function)
+   37 |         HAL_UART_Transmit(&huart2, msg, sizeof(msg), HAL_MAX_DELAY);
+      |                                    ^~~
+../Core/Src/main.c:37:36: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j22 all" terminated with exit code 2. Build might be incomplete.
+
+16:09:58 Build Failed. 3 errors, 0 warnings. (took 734ms)
+
