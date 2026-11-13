@@ -25,9 +25,26 @@ uint8_t recp = FALSE;
 
 int main(void) {
 
+	char msg[100];
 	HAL_Init();
 	SystemClockConfig();
 	UART2_Init();
+
+	memset(msg, 0, sizeof(msg));
+	sprintf(msg, "SYSCLK : %ld\r\n", HAL_RCC_GetSysClockFreq());
+	HAL_UART_Transmit(&huart2, (uint8_t*)msg, sizeof(msg), HAL_MAX_DELAY);
+
+	memset(msg, 0, sizeof(msg));
+	sprintf(msg, "HClk : %ld\r\n", HAL_RCC_GetHCLKFreq());
+	HAL_UART_Transmit(&huart2, (uint8_t*)msg, sizeof(msg), HAL_MAX_DELAY);
+
+	memset(msg, 0, sizeof(msg));
+	sprintf(msg, "PClk1 : %ld\r\n", HAL_RCC_GetPCLK1Freq());
+	HAL_UART_Transmit(&huart2, (uint8_t*)msg, sizeof(msg), HAL_MAX_DELAY);
+
+	memset(msg, 0, sizeof(msg));
+	sprintf(msg, "PClk2 : %ld\r\n", HAL_RCC_GetPCLK2Freq());
+	HAL_UART_Transmit(&huart2, (uint8_t*)msg, sizeof(msg), HAL_MAX_DELAY);
 
 	oscillator_Init();
 	clk_init();
@@ -39,7 +56,6 @@ int main(void) {
 
 	UART2_Init();
 
-	char msg[100];
 	memset(msg, 0, sizeof(msg));
 	sprintf(msg, "SYSCLK : %ld\r\n", HAL_RCC_GetSysClockFreq());
 	HAL_UART_Transmit(&huart2, (uint8_t*)msg, sizeof(msg), HAL_MAX_DELAY);
@@ -96,9 +112,9 @@ void clk_init(void)
 {
 	RCC_ClkInitTypeDef clkInit;
 	memset(&clkInit, 0, sizeof(clkInit));
-	clkInit.ClockType = RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2 | RCC_CLOCKTYPE_SYSCLK;
+	clkInit.ClockType = RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2 | RCC_CLOCKTYPE_HCLK;
 	clkInit.SYSCLKSource = RCC_SYSCLKSOURCE_HSE;
-	clkInit.AHBCLKDivider = RCC_CFGR_HPRE_DIV4;
+	clkInit.AHBCLKDivider = RCC_CFGR_HPRE_DIV2;
 	clkInit.APB1CLKDivider = RCC_HCLK_DIV2;
 	clkInit.APB2CLKDivider = RCC_HCLK_DIV2;
 	if (HAL_RCC_ClockConfig(&clkInit, FLASH_ACR_LATENCY_0WS) != HAL_OK)

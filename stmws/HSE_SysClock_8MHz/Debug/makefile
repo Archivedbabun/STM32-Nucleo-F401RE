@@ -60,8 +60,8 @@ all: main-build
 main-build: HSE_SysClock_8MHz.elf secondary-outputs
 
 # Tool invocations
-HSE_SysClock_8MHz.elf HSE_SysClock_8MHz.map: $(OBJS) $(USER_OBJS) C:\_ddm\STM\STM32-Nucleo-F401RE\stmws\HSE_SysClock_8MHz\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "HSE_SysClock_8MHz.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\_ddm\STM\STM32-Nucleo-F401RE\stmws\HSE_SysClock_8MHz\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HSE_SysClock_8MHz.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+HSE_SysClock_8MHz.elf HSE_SysClock_8MHz.map: $(OBJS) $(USER_OBJS) C:\_db\STM32-Nucleo-F401RE\stmws\HSE_SysClock_8MHz\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "HSE_SysClock_8MHz.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\_db\STM32-Nucleo-F401RE\stmws\HSE_SysClock_8MHz\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HSE_SysClock_8MHz.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
