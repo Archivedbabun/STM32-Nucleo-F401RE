@@ -7,6 +7,13 @@
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="false"/>
 		<list key="findhistory">
+			<item value="count"/>
+			<item value="DIV"/>
+			<item value="buf_data"/>
+			<item value="data_buf"/>
+			<item value="RCC_PLL_Clock_Source"/>
+			<item value="HSI"/>
+			<item value="RCC_PLL_Config"/>
 			<item value="RCC_APB1_APB2_Clock_Source"/>
 			<item value="RCC_AHB_Clock_Source"/>
 			<item value="RCC_System_Clock_Source"/>
